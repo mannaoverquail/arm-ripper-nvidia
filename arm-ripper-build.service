@@ -1,0 +1,7 @@
+
+[Unit]
+Description=Weekly build for arm-ripper images. 
+
+[Service]
+USER=tkent
+ExecStart=/home/tkent/repos/docker-image-builder/build-image.sh https://github.com/Tjkent88/arm-ripper-nvidia-525 arm-ripper-nvidia-525
