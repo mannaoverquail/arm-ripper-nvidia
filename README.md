@@ -9,4 +9,4 @@ Dockerhub:
 https://hub.docker.com/r/tjkent88/arm-ripper-nvidia-525
 
 Github:
-https://github.com/Tjkent88/docker-image-builder
+https://github.com/Tjkent88/arm-ripper-nvidia-525
