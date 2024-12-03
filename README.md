@@ -1,14 +1,22 @@
-# arm-ripper-nvidia-525
+# arm-ripper-nvidia
 
-Added the update for pioneer drive bug issue noted 
-https://github.com/automatic-ripping-machine/automatic-ripping-machine/issues/779
-This directly effects my set up so I am patching it here. Once this has been patched in the code, I will remove it in favor of the new route.
+Automatic Ripping Machine with Nvidia Drivers
 
 Based on the container by 
 https://github.com/automatic-ripping-machine/automatic-ripping-machine/
 
 This is a fork for encoding with nvidia devices.
 
+It has been updated to include newer nvidia drivers starting with 550. 
+
+Dockerhub:
+https://hub.docker.com/r/manna888/arm-nvidia
+
+Github:
+https://github.com/mannaoverquail/arm-ripper-nvidia
+
+
+Forked from:
 Dockerhub:
 https://hub.docker.com/r/tjkent88/arm-ripper-nvidia-525
 
