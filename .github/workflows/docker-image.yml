@@ -1,0 +1,38 @@
+name: Build and Push Docker Image
+
+
+
+on:
+    [workflow_dispatch]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Build Image
+
+        run: |
+
+          docker build -t manna888/arm-nvidia:latest .
+          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550
+          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550$(date +%s)
+         
+
+      - name: Publish Image
+
+        run: |
+
+          docker login -u manna888 -p ${{ secrets.DOCKERHUB_TOKEN }}
+          
+          docker push --all-tags manna888/arm-nvidia
+
+
+
+          
