@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:550$(date +%s) --tag my-image-name:latest --tag my-image-name:550latest
+      run: docker build . --file Dockerfile --tag my-image-name:550_$(date +%s) --tag my-image-name:latest --tag my-image-name:550_latest
