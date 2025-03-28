@@ -21,17 +21,9 @@ jobs:
         run: |
           
           docker build -t manna888/arm-nvidia:latest .
-          
-      -
-        name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: manna888/arm-nvidia
-          tags: |
-            type=raw,value=latest
-            type=raw,value=550
-            type=raw,value=550_{{date 'YYYYMMDD'}}   
+          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550
+          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550_$(date +"%Y%m%d")
+            
 
       - name: Publish Image
 
