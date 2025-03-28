@@ -22,7 +22,7 @@ jobs:
           
           docker build -t manna888/arm-nvidia:latest .
           docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550
-          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550_$(date +"%Y%m%d")
+          docker image tag manna888/arm-nvidia:latest manna888/arm-nvidia:550_$(date +"%Y-%m-%d")
             
 
       - name: Publish Image
